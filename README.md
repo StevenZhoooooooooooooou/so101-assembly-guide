@@ -290,11 +290,11 @@ Use these photos as references for the initial calibration poses: the white Foll
 
 ![Black Leader pose for calibration](images/calibration-pose-leader.jpg)
 
-These two videos show how to move several joints by hand during calibration. Click each preview to play the video.
+These two videos show how to move several joints by hand during calibration. Click a preview to watch it in the browser.
 
-[![Preview of the white Follower joint movement video](images/calibration-joint-motion-follower.jpg)](videos/20260929_212640000_iOS.mp4)
+[![Preview of the white Follower joint movement video](images/calibration-joint-motion-follower.jpg)](https://stevenzhoooooooooooooou.github.io/so101-assembly-guide/#follower-joints)
 
-[![Preview of the black Leader joint movement video](images/calibration-joint-motion-leader.jpg)](videos/20260929_212833000_iOS.mp4)
+[![Preview of the black Leader joint movement video](images/calibration-joint-motion-leader.jpg)](https://stevenzhoooooooooooooou.github.io/so101-assembly-guide/#leader-joints)
 
 Linux/macOS:
 
@@ -314,9 +314,9 @@ lerobot-teleoperate --robot.type=so101_follower --robot.port=COM3 --robot.id=so1
 
 Move the Leader a small amount first and confirm that the Follower's J1–J5 and gripper respond in the expected direction. Press `Ctrl+C` to stop if motion looks wrong, then check servo labels, assembly orientation, calibration, and cables. Cameras, datasets, and model training are not required for this check.
 
-After teleoperation starts successfully, the Follower should move with the Leader. Click the preview to watch the example.
+After teleoperation starts successfully, the Follower should move with the Leader. Click the preview to watch the example in the browser.
 
-[![Preview of successful Leader-to-Follower teleoperation](images/teleoperation-success.jpg)](videos/IMG_0246.mp4)
+[![Preview of successful Leader-to-Follower teleoperation](images/teleoperation-success.jpg)](https://stevenzhoooooooooooooou.github.io/so101-assembly-guide/#teleoperation)
 
 ## 6. Troubleshooting
 
