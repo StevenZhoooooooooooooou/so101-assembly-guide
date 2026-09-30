@@ -1,6 +1,6 @@
-# SO-101 Assembly and LeRobot Setup Guide (English Draft)
+# SO-101 Assembly and LeRobot Setup Guide
 
-This guide is for readers assembling an SO-101 Leader and Follower from parts. Install LeRobot and configure the servos one at a time, assemble joints J1 through J6, wire the arms, calibrate them, and test teleoperation. Each assembly section has an image placeholder for photos you can add later. If you are building only a Follower, skip the Leader-specific steps.
+This guide is for readers assembling an SO-101 Leader and Follower from parts. Install LeRobot and configure the servos one at a time, assemble joints J1 through J6, wire the arms, calibrate them, and test teleoperation. If you are building only a Follower, skip the Leader-specific steps.
 
 > Scope: the SO-101 design using Feetech STS3215 bus servos. Printed parts, controllers, and power supplies vary by kit; check the markings on your actual components. Software commands were checked against the LeRobot `main` documentation and local source on 2026-09-30. Recheck the CLI when upgrading LeRobot.
 
@@ -40,7 +40,7 @@ All six Follower servos are the same model, `ST-3215-C047`. Label them `1`–`6`
 
 ### 1.3 Build order and photo list
 
-Order: install software → find ports → configure each servo ID and baud rate → clean printed parts → J1 → J2 → J3 → J4 → J5 → J6 → wiring → calibration → teleoperation. For each joint, add a parts layout photo, a servo/horn orientation photo, and an assembled view showing the cable path.
+Order: install software → find ports → configure each servo ID and baud rate → clean printed parts → J1 → J2 → J3 → J4 → J5 → J6 → wiring → calibration → teleoperation.
 
 ## 2. Install LeRobot (Linux, Windows, macOS)
 
@@ -75,7 +75,7 @@ cd lerobot
 python -m pip install -e ".[core_scripts,feetech]"
 ```
 
-macOS ports often look like `/dev/cu.usbmodem...` or `/dev/tty.usbmodem...`. If you already have a local LeRobot checkout, run the install command inside that checkout instead of cloning it again.
+macOS ports often look like `/dev/cu.usbmodem...` or `/dev/tty.usbmodem...`. If you already have a local LeRobot checkout, run the install command inside that checkout instead of cloning it again. This workspace also contains a [Mac-specific quick-start](SO101_使用说明.md) using a local `so101.sh` wrapper; readers on other machines should use the standard CLI commands below.
 
 ### 2.3 Windows (native PowerShell or Miniforge Prompt)
 
@@ -89,7 +89,7 @@ cd lerobot
 python -m pip install -e ".[core_scripts,feetech]"
 ```
 
-Find the controller's COM number in Device Manager under **Ports (COM & LPT)**, such as `COM3` or `COM4`. Windows commands later in this guide are single-line PowerShell commands; Bash's `\` line continuation does not work in PowerShell. The official installation page covers Windows environment activation. The Windows hardware connection flow in this draft still needs testing on the target PC.
+Find the controller's COM number in Device Manager under **Ports (COM & LPT)**, such as `COM3` or `COM4`. Windows commands later in this guide are single-line PowerShell commands; Bash's `\` line continuation does not work in PowerShell. The official installation page covers Windows environment activation. The Windows hardware connection flow still needs testing on the target PC.
 
 ### 2.4 Verify the installation on any platform
 
@@ -166,7 +166,17 @@ Replace the ports above with your actual ports, and connect each motor as named 
 
 ## 4. Mechanical assembly
 
-The joint sections provide the text structure for later photos. Check orientations, screw counts, and horn details against your printed parts and kit BOM. Test-fit each joint, confirm smooth movement, then tighten screws. Screws that are too long can damage a servo. The M2×6 mm and M3×6 mm sizes below follow the [Hugging Face joint guide](https://huggingface.co/docs/lerobot/main/en/so101).
+The following sections cover joints J1–J6. We strongly recommend following these steps alongside the [Hugging Face SO-101 assembly guide](https://huggingface.co/docs/lerobot/main/en/so101).
+
+**Joints J1–J5 are assembled the same way on the Leader and Follower.** Before each step, choose the motor labeled for that position. `L` means Leader; `F` means Follower.
+
+| Position | Follower motor | Leader motor |
+| --- | --- | --- |
+| J1 Base rotation | `F1` | `L1` |
+| J2 Shoulder lift | `F2` | `L2` |
+| J3 Elbow flex | `F3` | `L3` |
+| J4 Wrist flex | `F4` | `L4` |
+| J5 Wrist roll | `F5` | `L5` |
 
 Each servo comes with two metal horns. The photo shows the output shaft and both horns so you can identify them before assembling the joints.
 
@@ -176,59 +186,71 @@ Each servo also comes with three types of screws. The next photo shows the two h
 
 ![Two metal servo horns and three screw types supplied with each servo](images/servo-horns-and-three-screw-types-cw90.jpg)
 
+#### Installing the two servo horns
+
+1. Align the splined horn with the motor's gold output spline. Press it on with the raised hub facing the motor.
+
+   ![Splined horn fitted to the motor's gold output spline](images/servo-splined-horn-installed.jpg)
+
+2. Insert the other horn into the black mounting hole at the opposite end of the motor, again with its raised hub facing the motor.
+
+   ![Other horn beside the black mounting hole at the opposite end of the motor](images/servo-rear-horn-before-install.jpg)
+
+3. Secure the horn at the opposite end with the separate pointed screw.
+
+   ![Side view of the opposite horn secured with the pointed screw](images/servo-rear-horn-pointed-screw.jpg)
+
 ### J1 Base rotation / Shoulder Pan
 
-Use `F1` or `L1`. Fit the upper and lower servo horns, securing the upper horn with an M3×6 mm screw. Put the servo in the base and fasten it with four M2×6 mm screws, two above and two below. Slide on the first motor holder and secure it with one M2×6 mm screw on each side. Attach the shoulder piece with four M3×6 mm screws on top and four below, then add the shoulder motor holder. Confirm that the base is secure and the cable cannot be pinched during rotation.
+1. Prepare the pictured base parts and motor `F1` (Follower) or `L1` (Leader).
 
-> 📷 Photo to add: inserting the J1 servo into the base, bottom screws, and cable exit.
+   ![J1 base parts and the matching motor labeled 1](images/onedrive-IMG_6533.jpg)
+
+2. Insert the motor into its position in the base part, oriented as shown.
+
+   ![Inserting the J1 motor into the base part in the specified orientation](images/onedrive-IMG_6532.jpg)
+
+3. Use the small screws to fasten the printed part to the motor from underneath the base.
+
+   ![Fastening the J1 motor to the printed part from underneath with a small screw](images/onedrive-IMG_6534.jpg)
+
+4. Continue fastening the other side with the small screws, checking that the motor sits flush against the printed part.
+
+   ![Tightening a small screw on the other side of the J1 motor](images/onedrive-IMG_6535.jpg)
+
+5. Insert the second connector piece at the position shown, then drive a small screw in from the side to join and secure the two printed parts.
+
+   ![Where to insert the second J1 connector piece](images/onedrive-IMG_6536.jpg)
 
 ### J2 Shoulder lift
 
-Use `F2` or `L2`. Fit the horns and secure the upper horn. Slide the servo into the shoulder holder from above and fasten it with four M2×6 mm screws. Align the upper arm with the horn and support side, then use four M3×6 mm screws on each side. Leave adjustable cable slack and check that shoulder movement does not wind the cable tightly around the axis.
+First, align the second connector piece from the previous section with the horn holes on both ends of the J1 motor (`F1` or `L1`). Fasten the connector to the motor with the larger screws (M3×6 mm), four above and four below. We recommend fastening the **non-splined side, where the horn can rotate freely**, first. The photo shows the second connector attached to the base assembly.
 
-These photos of the black Leader parts show shoulder joint J2: its servo sits beside the base with the metal horn facing outward. The next views show fastening from inside the base and fitting the upper-arm holder.
-
-![J2 servo beside the base, with metal horn and shoulder printed parts](images/onedrive-IMG_6532.jpg)
-
-![Side view of the J2 servo aligned with the shoulder printed part](images/onedrive-IMG_6533.jpg)
-
-![Tightening a shoulder connection screw from inside the base](images/onedrive-IMG_6534.jpg)
-
-![Close-up of a shoulder connection screw](images/onedrive-IMG_6535.jpg)
-
-![Side view after fitting the J2 upper-arm holder to the base](images/onedrive-IMG_6536.jpg)
-
-![Another side view of the fitted J2 upper-arm holder](images/onedrive-IMG_6537.jpg)
-
-> 📷 Photo to add: fasteners on the other side of the J2 upper arm and shoulder movement check.
+![Second connector attached to the J1 base assembly](images/onedrive-IMG_6537.jpg)
 
 ### J3 Elbow flex
 
-Use `F3` or `L3`. Fit the horns and secure the upper horn. Place the servo at the end of the upper arm and fasten it with four M2×6 mm screws. Attach the forearm to J3 with four M3×6 mm screws on each side. Slowly flex the elbow and check for shell contact or tension on the three-pin plug.
+Before inserting motor `F3` or `L3`, fit the rectangular shell-shaped printed part into the previous assembly. Do not confuse it with the similar-looking part: **choose the one whose cable opening is on the slanted edge, rather than on the side face.** Then fit the horns, place the motor in the shell, and fasten it with four M2×6 mm screws. Attach the forearm to J3 with four M3×6 mm screws on each side.
 
-The first photo shows the J3 servo and metal horn at the end of the upper arm. The second shows the forearm attached and the three-pin cable routed alongside it.
+The first photo shows the rectangular shell and the installed J3 motor. Check the orientation of the long connector against the second photo before fitting it, so it is not installed backwards.
 
-![J3 servo at the end of the upper arm, with its metal horn facing outward](images/onedrive-IMG_6538.jpg)
+![Rectangular shell with the J3 motor installed](images/onedrive-IMG_6538.jpg)
 
-![Side view after attaching the J3 forearm, showing the three-pin lead](images/onedrive-IMG_6539.jpg)
-
-> 📷 Photo to add: J3 connection screws and elbow motion range.
+![Orientation of the J3 long connector and cable routing](images/onedrive-IMG_6539.jpg)
 
 ### J4 Wrist flex
 
 Use `F4` or `L4`. Slide the J4 motor holder into place, then slide in the servo. Fit the horns, secure the upper horn with an M3×6 mm screw, and fasten the servo with four M2×6 mm screws. Check the orientation of the surface that will carry the wrist, and leave a path for the J5/J6 cables.
 
-This side view shows the assembly through the forearm. Another servo and its metal horn are visible at the far end; the wrist connection is not yet shown.
+The photo shows the overall position of the motor and metal horn at the end of the forearm.
 
-![Servo and metal horn at the end of the forearm, with the assembled base-to-forearm structure](images/onedrive-IMG_6540.jpg)
-
-> 📷 Photo to add: fitting the J4 motor holder, wrist connection, and cable exit.
+![Motor and metal horn at the forearm end during the J4 stage](images/onedrive-IMG_6540.jpg)
 
 ### J5 Wrist roll
 
 Use `F5` or `L5`. Insert the servo into the wrist holder and secure it with two front M2×6 mm screws. Fit only one horn here, held by one M3×6 mm screw. Attach the wrist assembly to J4 using M3×6 mm screws on both sides at the printed mounting holes. Check motion by hand before routing the J4 and J5 cables.
 
-> 📷 Photo to add: J5 single horn; connection to J4; cable slack during wrist rotation.
+> 📷 Photo to add: the J5 single horn, wrist connection to J4, and cable slack during rotation.
 
 ### J6 Follower gripper / Leader handle and trigger
 
@@ -256,11 +278,25 @@ These two photos show the controller mounted on a black printed plate. Brass sta
 
 Then daisy-chain the three-pin leads by servo ID 1→6, with J1 connected to the controller. Use the printed cable clips and guides. Slowly move every unpowered joint through its range and look for pulled leads, pinched cables, or loose plugs. Clamp the base securely and clear the arm's working area before connecting the correct power supply. Disconnect power immediately if you notice unusual heat, odor, or noise.
 
-> 📷 Photo to add: final location of the mounting plate in the base; full cable route; finished Leader and Follower.
+The photo shows both completed arms: the white Follower on the left and the black Leader on the right.
+
+![Completed white Follower and black Leader arms](images/assembled-leader-follower.jpg)
 
 ## 5. Calibrate and test teleoperation
 
 Calibrate each assembled arm separately. First place every joint near the middle of its travel. After pressing Enter, slowly move each joint through its full range as instructed. The calibration ID names a local record; use the same ID during teleoperation. Replace the example ports below.
+
+Use these photos as references for the initial calibration poses: the white Follower first, then the black Leader.
+
+![White Follower pose for calibration](images/calibration-pose-follower.jpg)
+
+![Black Leader pose for calibration](images/calibration-pose-leader.jpg)
+
+These two videos show how to move several joints by hand during calibration. Click each preview to play the video.
+
+[![Preview of the white Follower joint movement video](images/calibration-joint-motion-follower.jpg)](videos/20260929_212640000_iOS.mp4)
+
+[![Preview of the black Leader joint movement video](images/calibration-joint-motion-leader.jpg)](videos/20260929_212833000_iOS.mp4)
 
 Linux/macOS:
 
@@ -279,6 +315,10 @@ lerobot-teleoperate --robot.type=so101_follower --robot.port=COM3 --robot.id=so1
 ```
 
 Move the Leader a small amount first and confirm that the Follower's J1–J5 and gripper respond in the expected direction. Press `Ctrl+C` to stop if motion looks wrong, then check servo labels, assembly orientation, calibration, and cables. Cameras, datasets, and model training are not required for this check.
+
+After teleoperation starts successfully, the Follower should move with the Leader. Click the preview to watch the example.
+
+[![Preview of successful Leader-to-Follower teleoperation](images/teleoperation-success.jpg)](videos/IMG_0246.mp4)
 
 ## 6. Troubleshooting
 
