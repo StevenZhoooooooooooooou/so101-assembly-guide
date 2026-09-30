@@ -1,8 +1,6 @@
 # SO-101 Assembly and LeRobot Setup Guide
 
-This guide is for readers assembling an SO-101 Leader and Follower from parts. Install LeRobot and configure the servos one at a time, assemble joints J1 through J6, wire the arms, calibrate them, and test teleoperation. If you are building only a Follower, skip the Leader-specific steps.
-
-> Scope: the SO-101 design using Feetech STS3215 bus servos. Printed parts, controllers, and power supplies vary by kit; check the markings on your actual components. Software commands were checked against the LeRobot `main` documentation and local source on 2026-09-30. Recheck the CLI when upgrading LeRobot.
+This guide was created by Aleks Santari, Yinzhe Zhou, Xinyi Yin, and Professor Krishna Murthy Jatavallabhula for **Hands-on Robot Learning** (EN.601.498 / EN.601.698) at Johns Hopkins University in Fall 2026. It covers assembling an SO-101 Leader and Follower from parts and bringing the two arms into teleoperation.
 
 ## 1. Before you start
 
