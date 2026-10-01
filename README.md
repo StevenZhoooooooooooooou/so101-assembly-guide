@@ -286,7 +286,7 @@ Use `F4` or `L4`. Slide the J4 motor holder into place, then insert the servo. F
 
    ![Leader J6 handle attached to its holder](images/leader-j6-handle-assembled.jpg)
 
-2. Insert the `L6` trigger motor into the holder, secure it with two M2×6 mm screws on each side, and connect its cable. Fit the metal horn and secure it with one M3×6 mm screw. The photo shows the installed motor, cable, and exposed horn.
+2. Insert the `L6` trigger motor into the holder, secure it with two M2×6 mm screws on each side, and connect its cable. Fit the metal horn. The photo shows the installed motor, cable, and exposed horn.
 
    ![Leader J6 trigger motor, cable, and metal horn](images/leader-j6-trigger-motor-installed.jpg)
 
