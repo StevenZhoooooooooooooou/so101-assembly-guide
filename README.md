@@ -198,6 +198,10 @@ Each servo also comes with three types of screws. The next photo shows the two h
 
    ![Side view of the opposite horn secured with the pointed screw](images/servo-rear-horn-pointed-screw.jpg)
 
+#### Cable routing and part orientation
+
+Except at J5, you can connect each motor's cables before inserting the motor into its printed part. **The two ports on each motor are interchangeable; either one can take the incoming cable.** Use the other port when daisy-chaining to the next motor. As you test-fit the printed connectors, keep their cable holes roughly on the same side of the arm so the cables have a smooth path. Use the hole positions to check each connector's orientation. For J5, follow its separate steps: insert the motor into its printed part, connect cables to both ports, and then attach the assembly to the arm.
+
 ### J1 Base rotation / Shoulder Pan
 
 1. Prepare the pictured base parts and motor `F1` (Follower) or `L1` (Leader).
@@ -272,7 +276,7 @@ Use `F4` or `L4`. Slide the J4 motor holder into place, then insert the servo. F
 
    ![Four screws securing the Follower J6 gripper body to the J5 horn](images/follower-j6-gripper-body-mounted.jpg)
 
-2. Insert the `F6` gripper servo into the body and secure it with two M2×6 mm screws on each side. Fit the horns. Check the motor and visible metal horn orientation against the second photo.
+2. You can connect the `F6` gripper servo cable before inserting the servo into the body. Secure it with two M2×6 mm screws on each side. Fit the horns. Check the motor and visible metal horn orientation against the second photo.
 
    ![Follower J6 gripper servo installed with its metal horn exposed](images/follower-j6-servo-installed.jpg)
 
@@ -286,7 +290,7 @@ Use `F4` or `L4`. Slide the J4 motor holder into place, then insert the servo. F
 
    ![Leader J6 handle attached to its holder](images/leader-j6-handle-assembled.jpg)
 
-2. Insert the `L6` trigger motor into the holder, secure it with two M2×6 mm screws on each side, and connect its cable. Fit the metal horn. The photo shows the installed motor, cable, and exposed horn.
+2. You can connect the `L6` trigger motor cable before inserting the motor into the holder. Secure it with two M2×6 mm screws on each side. Fit the metal horn. The photo shows the installed motor, cable, and exposed horn.
 
    ![Leader J6 trigger motor, cable, and metal horn](images/leader-j6-trigger-motor-installed.jpg)
 
@@ -310,7 +314,7 @@ These two photos show the controller mounted on a black printed plate. Brass sta
 
 ![Controller mounted on a black printed plate, top view showing USB-C and red-black power wires](images/onedrive-IMG_6531.jpg)
 
-Then daisy-chain the three-pin leads by servo ID 1→6, with J1 connected to the controller. Use the printed cable clips and guides. Slowly move every unpowered joint through its range and look for pulled leads, pinched cables, or loose plugs. Clamp the base securely and clear the arm's working area before connecting the correct power supply. Disconnect power immediately if you notice unusual heat, odor, or noise.
+Finally, complete the 1→6 daisy-chain with the three-pin leads and connect the J1 lead to the controller. Use the printed cable clips and guides. Slowly move every unpowered joint through its range and look for pulled leads, pinched cables, or loose plugs. Clamp the base securely and clear the arm's working area before connecting the correct power supply. Disconnect power immediately if you notice unusual heat, odor, or noise.
 
 The photo shows both completed arms: the white Follower on the left and the black Leader on the right.
 
