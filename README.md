@@ -38,7 +38,7 @@ All six Follower servos are the same model, `ST-3215-C047`. Label them `1`–`6`
 
 ### 1.3 Build order and photo list
 
-Order: install software → find ports → configure each servo ID and baud rate → clean printed parts → J1 → J2 → J3 → J4 → J5 → J6 → wiring → mount and focus the camera → calibration → teleoperation.
+Order: install software → find ports → configure each servo ID and baud rate → clean printed parts → J1 → J2 → J3 → J4 → J5 → J6 → wiring → calibration → teleoperation → mount and focus the camera.
 
 ## 2. Install LeRobot (Linux, Windows, macOS)
 
@@ -320,7 +320,45 @@ The photo shows both completed arms: the white Follower on the left and the blac
 
 ![Completed white Follower and black Leader arms](images/assembled-leader-follower.jpg)
 
-### 4.8 Mount and focus the Follower camera
+## 5. Calibrate and test teleoperation
+
+Calibrate each assembled arm separately. First place every joint near the middle of its travel. After pressing Enter, slowly move each joint through its full range as instructed. The calibration ID names a local record; use the same ID during teleoperation. Replace the example ports below.
+
+Use these photos as references for the initial calibration poses: the white Follower first, then the black Leader.
+
+![White Follower pose for calibration](images/calibration-pose-follower.jpg)
+
+![Black Leader pose for calibration](images/calibration-pose-leader.jpg)
+
+These two videos show how to move several joints by hand during calibration. Click a preview to watch it in the browser.
+
+[![Preview of the white Follower joint movement video](images/calibration-joint-motion-follower.jpg)](https://stevenzhoooooooooooooou.github.io/so101-assembly-guide/#follower-joints)
+
+[![Preview of the black Leader joint movement video](images/calibration-joint-motion-leader.jpg)](https://stevenzhoooooooooooooou.github.io/so101-assembly-guide/#leader-joints)
+
+Linux/macOS:
+
+```bash
+lerobot-calibrate --robot.type=so101_follower --robot.port=/dev/ttyACM0 --robot.id=so101_follower_arm
+lerobot-calibrate --teleop.type=so101_leader --teleop.port=/dev/ttyACM1 --teleop.id=so101_leader_arm
+lerobot-teleoperate --robot.type=so101_follower --robot.port=/dev/ttyACM0 --robot.id=so101_follower_arm --teleop.type=so101_leader --teleop.port=/dev/ttyACM1 --teleop.id=so101_leader_arm
+```
+
+Windows PowerShell:
+
+```powershell
+lerobot-calibrate --robot.type=so101_follower --robot.port=COM3 --robot.id=so101_follower_arm
+lerobot-calibrate --teleop.type=so101_leader --teleop.port=COM4 --teleop.id=so101_leader_arm
+lerobot-teleoperate --robot.type=so101_follower --robot.port=COM3 --robot.id=so101_follower_arm --teleop.type=so101_leader --teleop.port=COM4 --teleop.id=so101_leader_arm
+```
+
+Move the Leader a small amount first and confirm that the Follower's J1–J5 and gripper respond in the expected direction. Press `Ctrl+C` to stop if motion looks wrong, then check servo labels, assembly orientation, calibration, and cables. Cameras, datasets, and model training are not required for this check.
+
+After teleoperation starts successfully, the Follower should move with the Leader. Click the preview to watch the example in the browser.
+
+[![Preview of successful Leader-to-Follower teleoperation](images/teleoperation-success.jpg)](https://stevenzhoooooooooooooou.github.io/so101-assembly-guide/#teleoperation)
+
+## 6. Mount and focus the Follower camera
 
 1. Prepare the Innomaker camera, white printed mount, camera cable, four M2 screws and nuts, and two screws for attaching the mount. The first photo has been rotated 90° counterclockwise to show the parts clearly.
 
@@ -360,45 +398,7 @@ FPS = 30
 
 [![Preview of turning the camera lens to focus an object at the gripper](images/camera-focus-preview.jpg)](https://stevenzhoooooooooooooou.github.io/so101-assembly-guide/#camera-focus)
 
-## 5. Calibrate and test teleoperation
-
-Calibrate each assembled arm separately. First place every joint near the middle of its travel. After pressing Enter, slowly move each joint through its full range as instructed. The calibration ID names a local record; use the same ID during teleoperation. Replace the example ports below.
-
-Use these photos as references for the initial calibration poses: the white Follower first, then the black Leader.
-
-![White Follower pose for calibration](images/calibration-pose-follower.jpg)
-
-![Black Leader pose for calibration](images/calibration-pose-leader.jpg)
-
-These two videos show how to move several joints by hand during calibration. Click a preview to watch it in the browser.
-
-[![Preview of the white Follower joint movement video](images/calibration-joint-motion-follower.jpg)](https://stevenzhoooooooooooooou.github.io/so101-assembly-guide/#follower-joints)
-
-[![Preview of the black Leader joint movement video](images/calibration-joint-motion-leader.jpg)](https://stevenzhoooooooooooooou.github.io/so101-assembly-guide/#leader-joints)
-
-Linux/macOS:
-
-```bash
-lerobot-calibrate --robot.type=so101_follower --robot.port=/dev/ttyACM0 --robot.id=so101_follower_arm
-lerobot-calibrate --teleop.type=so101_leader --teleop.port=/dev/ttyACM1 --teleop.id=so101_leader_arm
-lerobot-teleoperate --robot.type=so101_follower --robot.port=/dev/ttyACM0 --robot.id=so101_follower_arm --teleop.type=so101_leader --teleop.port=/dev/ttyACM1 --teleop.id=so101_leader_arm
-```
-
-Windows PowerShell:
-
-```powershell
-lerobot-calibrate --robot.type=so101_follower --robot.port=COM3 --robot.id=so101_follower_arm
-lerobot-calibrate --teleop.type=so101_leader --teleop.port=COM4 --teleop.id=so101_leader_arm
-lerobot-teleoperate --robot.type=so101_follower --robot.port=COM3 --robot.id=so101_follower_arm --teleop.type=so101_leader --teleop.port=COM4 --teleop.id=so101_leader_arm
-```
-
-Move the Leader a small amount first and confirm that the Follower's J1–J5 and gripper respond in the expected direction. Press `Ctrl+C` to stop if motion looks wrong, then check servo labels, assembly orientation, calibration, and cables. Cameras, datasets, and model training are not required for this check.
-
-After teleoperation starts successfully, the Follower should move with the Leader. Click the preview to watch the example in the browser.
-
-[![Preview of successful Leader-to-Follower teleoperation](images/teleoperation-success.jpg)](https://stevenzhoooooooooooooou.github.io/so101-assembly-guide/#teleoperation)
-
-## 6. Troubleshooting
+## 7. Troubleshooting
 
 | Symptom | Check first |
 | --- | --- |
