@@ -268,9 +268,21 @@ Use `F4` or `L4`. Slide the J4 motor holder into place, then insert the servo. F
 
 **Follower:** Use `F6`. Attach the gripper body to the J5 horn with four M3×6 mm screws. Insert the gripper servo and secure it with two M2×6 mm screws on each side. Fit the horns, fastening the upper one with an M3×6 mm screw. Attach the moving jaw to the horn/support side with four M3×6 mm screws on each side. Check that the jaws open and close without binding.
 
-**Leader:** Use `L6`. Secure the handle holder to the wrist with four M3×6 mm screws, then attach the handle with one M2×6 mm screw. Insert the trigger servo and secure it with two M2×6 mm screws on each side. Fit and fasten its horn with an M3×6 mm screw, then attach the trigger to the horn with four M3×6 mm screws. Check that the trigger moves smoothly under finger pressure.
+**Leader:** Use `L6` and assemble the handle, trigger motor, and trigger in this order:
 
-> 📷 Photo to add: Follower gripper exploded view and open/closed positions; Leader handle and trigger assembly.
+1. Fasten the handle to its holder with one M2×6 mm screw, then secure the holder to the wrist with four M3×6 mm screws. The photo shows the assembled handle and holder.
+
+   ![Leader J6 handle attached to its holder](images/leader-j6-handle-assembled.jpg)
+
+2. Insert the `L6` trigger motor into the holder, secure it with two M2×6 mm screws on each side, and connect its cable. Fit the metal horn and secure it with one M3×6 mm screw. The photo shows the installed motor, cable, and exposed horn.
+
+   ![Leader J6 trigger motor, cable, and metal horn](images/leader-j6-trigger-motor-installed.jpg)
+
+3. Align the loop-shaped trigger with the horn holes and fasten it with four M3×6 mm screws. Check that the trigger moves smoothly under finger pressure.
+
+   ![Leader J6 loop trigger fastened to the horn](images/leader-j6-trigger-mounted.jpg)
+
+> 📷 Photo to add: Follower gripper exploded view and open/closed positions.
 
 ### 4.7 Wiring and final mechanical check
 
