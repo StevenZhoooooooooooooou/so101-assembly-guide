@@ -222,33 +222,47 @@ Each servo also comes with three types of screws. The next photo shows the two h
 
 ### J2 Shoulder lift
 
-First, align the second connector piece from the previous section with the horn holes on both ends of the J1 motor (`F1` or `L1`). Fasten the connector to the motor with the larger screws (M3×6 mm), four above and four below. We recommend fastening the **non-splined side, where the horn can rotate freely**, first. The photo shows the second connector attached to the base assembly.
+First, align the second connector from J1 with the horn holes on both ends of motor `F1` or `L1`. Fasten it with the larger screws (M3×6 mm), four above and four below. We recommend fastening the **non-splined side, where the horn can rotate freely**, first.
 
 ![Second connector attached to the J1 base assembly](images/onedrive-IMG_6537.jpg)
 
+Next, fit the rectangular shell-shaped printed part onto the previous assembly, then insert motor `F2` or `L2`. Do not confuse it with the similar-looking part: **choose the one with the cable opening on the slanted edge, rather than on the side face.** Secure the motor with the smaller screws and check its position against the photo.
+
+![J2 rectangular shell with its motor installed](images/onedrive-IMG_6538.jpg)
+
+Before attaching the long connector, check its orientation and cable path against the next photo. Align the connector with the horn holes and secure it without reversing the printed part.
+
+![J2 long connector orientation and cable routing](images/onedrive-IMG_6539.jpg)
+
 ### J3 Elbow flex
 
-Before inserting motor `F3` or `L3`, fit the rectangular shell-shaped printed part into the previous assembly. Do not confuse it with the similar-looking part: **choose the one whose cable opening is on the slanted edge, rather than on the side face.** Then fit the horns, place the motor in the shell, and fasten it with four M2×6 mm screws. Attach the forearm to J3 with four M3×6 mm screws on each side.
+Insert motor `F3` or `L3` into the holder at the end of the long connector, then secure the motor and its horn. Match the motor, metal horn, and cable orientation to the photo before attaching the next forearm part.
 
-The first photo shows the rectangular shell and the installed J3 motor. Check the orientation of the long connector against the second photo before fitting it, so it is not installed backwards.
-
-![Rectangular shell with the J3 motor installed](images/onedrive-IMG_6538.jpg)
-
-![Orientation of the J3 long connector and cable routing](images/onedrive-IMG_6539.jpg)
+![J3 motor at the end of the long connector](images/onedrive-IMG_6540.jpg)
 
 ### J4 Wrist flex
 
-Use `F4` or `L4`. Slide the J4 motor holder into place, then slide in the servo. Fit the horns, secure the upper horn with an M3×6 mm screw, and fasten the servo with four M2×6 mm screws. Check the orientation of the surface that will carry the wrist, and leave a path for the J5/J6 cables.
+Use `F4` or `L4`. Slide the J4 motor holder into place, then insert the servo. Fit the horns, secure the upper horn with an M3×6 mm screw, and fasten the servo with four M2×6 mm screws. Check the orientation of the surface that will carry the wrist, and leave a path for the J5/J6 cables. The photo shows the assembled J4 position.
 
-The photo shows the overall position of the motor and metal horn at the end of the forearm.
-
-![Motor and metal horn at the forearm end during the J4 stage](images/onedrive-IMG_6540.jpg)
+![J4 motor, horn, and forearm end after assembly](images/j4-wrist-flex-assembled.jpg)
 
 ### J5 Wrist roll
 
-Use `F5` or `L5`. Insert the servo into the wrist holder and secure it with two front M2×6 mm screws. Fit only one horn here, held by one M3×6 mm screw. Attach the wrist assembly to J4 using M3×6 mm screws on both sides at the printed mounting holes. Check motion by hand before routing the J4 and J5 cables.
+1. **We strongly recommend removing the horn from the splined side of motor `F5` or `L5` before inserting the motor into the J5 printed part.** Secure the motor with the small screws, then reinstall and fasten the horn on the splined side. J5 **uses only this one horn**; do not fit a horn on the opposite side.
 
-> 📷 Photo to add: the J5 single horn, wrist connection to J4, and cable slack during rotation.
+   ![J5 motor in its printed holder with one horn on the splined side](images/j5-motor-horn-side.jpg)
+
+2. Check the motor and holder orientation from the other side, and leave a route for the cables.
+
+   ![Opposite side of the J5 motor holder and cable exit](images/j5-motor-cable-side.jpg)
+
+3. **Connect cables to both ports on the J5 motor before attaching this assembly to the arm.** Route the cables through the printed part and leave slack for movement. Both ports are difficult to reach after attachment. The photo shows the cable path through the printed part.
+
+   ![J5 cable path through the printed part before attaching the assembly to the arm](images/j5-cable-routing-before-attachment.jpg)
+
+4. Align the mounting holes and attach the J5 assembly to the end of the J4 forearm. After attachment, move the wrist by hand to check for binding or cable tension.
+
+   ![J5 assembly attached to the forearm](images/j5-attached-to-arm.jpg)
 
 ### J6 Follower gripper / Leader handle and trigger
 
