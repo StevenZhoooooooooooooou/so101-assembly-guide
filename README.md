@@ -38,7 +38,7 @@ All six Follower servos are the same model, `ST-3215-C047`. Label them `1`–`6`
 
 ### 1.3 Build order and photo list
 
-Order: install software → find ports → configure each servo ID and baud rate → clean printed parts → J1 → J2 → J3 → J4 → J5 → J6 → wiring → calibration → teleoperation.
+Order: install software → find ports → configure each servo ID and baud rate → clean printed parts → J1 → J2 → J3 → J4 → J5 → J6 → wiring → mount and focus the camera → calibration → teleoperation.
 
 ## 2. Install LeRobot (Linux, Windows, macOS)
 
@@ -319,6 +319,46 @@ Finally, complete the 1→6 daisy-chain with the three-pin leads and connect the
 The photo shows both completed arms: the white Follower on the left and the black Leader on the right.
 
 ![Completed white Follower and black Leader arms](images/assembled-leader-follower.jpg)
+
+### 4.8 Mount and focus the Follower camera
+
+1. Prepare the Innomaker camera, white printed mount, camera cable, four M2 screws and nuts, and two screws for attaching the mount. The first photo has been rotated 90° counterclockwise to show the parts clearly.
+
+   ![Camera, printed mount, cable, four M2 screws and nuts, and two mount screws](images/camera-kit-ccw90.jpg)
+
+2. Align the camera board with the square opening in the mount. Insert four M2 screws from the back of the board and secure four nuts on the lens side. The next photos show the lens side and the back of the board.
+
+   ![Lens side of the camera secured to its mount with four nuts](images/camera-mounted-front.jpg)
+
+   ![Back of the camera board with four M2 screws through the mount](images/camera-mounted-back.jpg)
+
+3. Use the two mounting screws to attach the camera mount above the Follower gripper. Plug the camera cable into the connector on the back of the board, leaving slack for joint movement.
+
+   ![Camera mount attached above the Follower gripper](images/camera-on-follower.jpg)
+
+Use the [OpenCV camera preview script](preview_innomaker.py) to focus the image. The LeRobot version used in this guide depends on headless OpenCV. For a preview window, create a separate desktop environment and run these commands from the folder containing the script:
+
+```bash
+conda create -y -n so101-camera python=3.12
+conda activate so101-camera
+python -m pip install opencv-python
+python preview_innomaker.py
+```
+
+Change `CAMERA_PORT` at the top of the script to the Innomaker video device port on your computer. The default camera input is **1920×1080 at 30 fps**. `DISPLAY_WIDTH` and `DISPLAY_HEIGHT` set a **960×540 preview window**; they do not change the camera input resolution. These values can be adjusted in the script:
+
+```python
+CAMERA_PORT = 0
+INPUT_WIDTH = 1920
+INPUT_HEIGHT = 1080
+DISPLAY_WIDTH = 960
+DISPLAY_HEIGHT = 540
+FPS = 30
+```
+
+**Slowly turn the lens until an object at the gripper position is clearly visible in the preview.** Click below to watch the focus adjustment.
+
+[![Preview of turning the camera lens to focus an object at the gripper](images/camera-focus-preview.jpg)](https://stevenzhoooooooooooooou.github.io/so101-assembly-guide/#camera-focus)
 
 ## 5. Calibrate and test teleoperation
 
