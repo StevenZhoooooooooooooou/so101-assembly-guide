@@ -360,9 +360,9 @@ After teleoperation starts successfully, the Follower should move with the Leade
 
 ## 6. Mount and focus the Follower camera
 
-1. Prepare the Innomaker camera, white printed mount, camera cable, four M2 screws and nuts, and two screws for attaching the mount. The first photo has been rotated 90° counterclockwise to show the parts clearly.
+1. Prepare the Innomaker camera, white printed mount, camera cable, four M2 screws and nuts, and two M3 screws supplied with the motor. The first photo has been rotated 90° counterclockwise to show the parts clearly.
 
-   ![Camera, printed mount, cable, four M2 screws and nuts, and two mount screws](images/camera-kit-ccw90.jpg)
+   ![Camera, printed mount, cable, four M2 screws and nuts, and two motor-supplied M3 screws](images/camera-kit-ccw90.jpg)
 
 2. Align the camera board with the square opening in the mount. Insert four M2 screws from the back of the board and secure four nuts on the lens side. The next photos show the lens side and the back of the board.
 
@@ -370,7 +370,7 @@ After teleoperation starts successfully, the Follower should move with the Leade
 
    ![Back of the camera board with four M2 screws through the mount](images/camera-mounted-back.jpg)
 
-3. Use the two mounting screws to attach the camera mount above the Follower gripper. Plug the camera cable into the connector on the back of the board, leaving slack for joint movement.
+3. Use the two M3 screws supplied with the motor to attach the camera mount above the Follower gripper. Plug the camera cable into the connector on the back of the board, leaving slack for joint movement.
 
    ![Camera mount attached above the Follower gripper](images/camera-on-follower.jpg)
 
