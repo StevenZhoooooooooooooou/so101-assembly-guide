@@ -272,7 +272,7 @@ Use `F4` or `L4`. Slide the J4 motor holder into place, then insert the servo. F
 
    ![Four screws securing the Follower J6 gripper body to the J5 horn](images/follower-j6-gripper-body-mounted.jpg)
 
-2. Insert the `F6` gripper servo into the body and secure it with two M2×6 mm screws on each side. Fit the horns and secure the upper one with an M3×6 mm screw. Check the motor and visible metal horn orientation against the second photo.
+2. Insert the `F6` gripper servo into the body and secure it with two M2×6 mm screws on each side. Fit the horns. Check the motor and visible metal horn orientation against the second photo.
 
    ![Follower J6 gripper servo installed with its metal horn exposed](images/follower-j6-servo-installed.jpg)
 
