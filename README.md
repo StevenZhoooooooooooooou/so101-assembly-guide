@@ -266,7 +266,19 @@ Use `F4` or `L4`. Slide the J4 motor holder into place, then insert the servo. F
 
 ### J6 Follower gripper / Leader handle and trigger
 
-**Follower:** Use `F6`. Attach the gripper body to the J5 horn with four M3×6 mm screws. Insert the gripper servo and secure it with two M2×6 mm screws on each side. Fit the horns, fastening the upper one with an M3×6 mm screw. Attach the moving jaw to the horn/support side with four M3×6 mm screws on each side. Check that the jaws open and close without binding.
+**Follower:** Use `F6` and assemble the gripper in this order:
+
+1. Align the gripper body with the J5 horn and fasten it with four M3×6 mm screws. The first photo shows the four fasteners from inside the gripper body.
+
+   ![Four screws securing the Follower J6 gripper body to the J5 horn](images/follower-j6-gripper-body-mounted.jpg)
+
+2. Insert the `F6` gripper servo into the body and secure it with two M2×6 mm screws on each side. Fit the horns and secure the upper one with an M3×6 mm screw. Check the motor and visible metal horn orientation against the second photo.
+
+   ![Follower J6 gripper servo installed with its metal horn exposed](images/follower-j6-servo-installed.jpg)
+
+3. Align the moving jaw with the horn and support-side holes, then fasten it with four M3×6 mm screws on each side. Slowly open and close the gripper to check that the jaw does not bind.
+
+   ![Follower J6 moving jaw installed on the gripper](images/follower-j6-moving-jaw-mounted.jpg)
 
 **Leader:** Use `L6` and assemble the handle, trigger motor, and trigger in this order:
 
@@ -281,8 +293,6 @@ Use `F4` or `L4`. Slide the J4 motor holder into place, then insert the servo. F
 3. Align the loop-shaped trigger with the horn holes and fasten it with four M3×6 mm screws. Check that the trigger moves smoothly under finger pressure.
 
    ![Leader J6 loop trigger fastened to the horn](images/leader-j6-trigger-mounted.jpg)
-
-> 📷 Photo to add: Follower gripper exploded view and open/closed positions.
 
 ### 4.7 Wiring and final mechanical check
 
